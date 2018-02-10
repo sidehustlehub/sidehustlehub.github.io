@@ -1,0 +1,50 @@
+/* 5. state (is-, has-,...) */
+/* #########################################################*/
+/* is */
+.is-active {}
+ .is-avail {}
+/* has */
+.has-focus {}
+.has- {}
+/* responsive media query extensions */
+.m0 {}
+.m1 {}
+.m2 {}
+.m3 {}
+.m4 {}
+.m5 {}
+.m6 {}
+.m7 {}
+.m8 {}
+.m9 {}
+
+/* responsive skin changes - don't overthink it grids*/
+/*
+<div class="flex-grid">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+</div>
+*/
+/* these two classes support any number of columns and they are automatically equal and flexible! */
+.flex-grid {
+    display: flex;
+}
+.col {
+    flex: 1;
+}
+/* wanna have them break into a column for small screens? Easy: */
+@media (max-width: 520px) {
+    .flex-grid {
+        display: block;
+    }
+}
+/* need gutters? You could add margins to the columns. You could add padding to the columns. I like the idea
+of using justification to create the columns, like: */
+.flex-grid-thirds {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-grid-thirds .col {
+    width: 32%;
+}

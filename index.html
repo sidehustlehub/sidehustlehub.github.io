@@ -1,0 +1,55 @@
+---
+layout: default
+---
+{% comment %}
+    {% include signup-gray-secondary.html %}
+{% endcomment %}
+
+{% include breadcrumbs.html %}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-5 pt-4 pb-4">
+            	<div class="card h-100 bg-teal text-white">
+                  <div class="card-body d-flex flex-column justify-content-around">
+                    <h3 class="h3"><strong>Start Here</strong></h3>
+                    <!--
+                    <h5 class="card-subtitle mb-2 text-semi pb-4">First time visitor? Start by reading this article.</h5>
+                    -->
+                    <p class="card-text">How to Build Income Streams With No Money and Time? <br><br>This site will show you how to solve this issue and get your first results TODAY.</p>
+                    <a href="/start-here" class="card-link" id="start-here">Read the article</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 pt-4 pb-4">
+                <div class="card h-100 text-white">
+                  <img class="card-img" src="/img/2017/08/30/build-your-first-income-stream.jpeg" alt="Guide: Build Your First Income Stream">
+                  <div class="card-img-overlay orange-transparent d-flex flex-column justify-content-end">
+                    <a class="h4 card-title" href="/guides/build-your-first-income-stream-today">Guides: Build Your First Income Stream, Today!</a>
+                    <!--
+                    <p class="card-text">How to build your first income stream? In this in-depth guide you will learn how to invest only several hours of your time into creating an online product that will be your first source of income online. This post is "sticky", meaning you will always find it on our home page. We are always improving it too, to give you the best possible advice. Take this actionable steps right now and start your side hustle!</p>
+                    -->
+                    <p class="card-text">Difficulty: <strong>easy</strong> | Reading time: <strong>20 minutes</strong></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .container -->
+</div><!-- .container-fluid -->
+
+
+<div class="container-fluid pt-5 pb-5 bg-light-gray">
+	<div class="container">
+		  	<div class="row">
+                {% include index-post-loop.html %}
+                {% include sitewide-sidebar.html %}
+			</div><!--row -->
+	</div><!-- container -->
+</div>
+
+{% comment %}
+    {% include signup-gray-secondary.html %}
+{% endcomment %}
+<!-- Footer -->	
+{% include footer.html %}

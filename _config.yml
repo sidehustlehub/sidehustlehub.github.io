@@ -1,0 +1,31 @@
+# Site Settings
+title: SideHustleHub.com
+email: contact@sidehustlehub.com
+description: > # this means to ignore newlines until "baseurl:"
+  SideHustleHub.com,  building income streams while working 9-to-5
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://sidehustlehub.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title
+
+#Site Details
+license: ""
+license-url: ""
+author: "SideHustelHub"
+
+# Jekyll Redirect From Plugin for Redirects from redirect_from in template-overviews/blog-with-sidebar
+plugins:
+  #- jekyll-redirect-from
+
+# Pagination
+paginate: 3
+
+# Compile to css from this folder, :nested, :compact, :expanded, :compressed
+sass:
+  sass_dir: scss
+  style: :nested

@@ -1,0 +1,130 @@
+/* 3. component container (width and height) (cc) */
+/* #########################################################*/
+/* 
+width: 
+    .cc-w1 to .cc-w1920
+    .cc-w1vw to .cc-w100vw, .cc-w1vh to .cc-w100vh
+    .cc-w1p to .cc-w100p, .cc-w1r to .cc-w120r, .cc-w1e to .cc-w120e
+min-width:
+    .cc-minw1 to .cc-minw1920
+    .cc-minw1vw to .cc-minw100vw, .cc-minw1vh to .cc-minw100vh
+    .cc-minw1p to .cc-minw100p, .cc-minw1r to .cc-minw120r, .cc-minw1e to .cc-minw120e
+height: 
+    .cc-h1 to .cc-h1920
+    .cc-h1vw to .cc-h100vw, .cc-h1vh to .cc-h100vh
+    .cc-h1p to .cc-h100p, .cc-h1r to .cc-h120r, .cc-h1e to .cc-h120e
+min-width:
+    .cc-minh1 to .cc-minh1920
+    .cc-minh1vw to .cc-minh100vw, .cc-minh1vh to .cc-minh100vh
+    .cc-minh1p to .cc-minh100p, .cc-minh1r to .cc-minh120r, .cc-minh1e to .cc-minh120e
+*/
+
+// width wX, min-width minwX, max-width maxwX, height hX, min-height minhX, max-height maxhX, 
+// in increments of 1
+@mixin size {
+    @for $i from 1 through 1920 {
+        .cc-w#{$i} {
+            width: #{$i}px;
+        }
+        .cc-minw#{$i} {
+            min-width: #{$i}px;
+        }
+        .cc-maxw#{$i} {
+            max-width: #{$i}px;
+        }
+        .cc-h#{$i} {
+            height: #{$i}px;
+        }
+        .cc-minh#{$i} {
+            min-height: #{$i}px;
+        }
+        .cc-maxh#{$i} {
+            max-height: #{$i}px;
+        }
+    }
+    @for $i from 1 through 100 {
+        .cc-w#{$i}vw {
+            width: #{$i}vw;
+        }
+        .cc-minw#{$i} {
+            min-width: #{$i}vw;
+        }
+        .cc-maxw#{$i}vw {
+            max-width: #{$i}vw;
+        }
+        .cc-h#{$i}vh {
+            height: #{$i}vh;
+        }
+        .cc-minh#{$i}vh {
+            min-height: #{$i}vh;
+        }
+        .cc-maxh#{$i}vh {
+            max-height: #{$i}vh;
+        }
+    }
+    $unit: '%';
+    @for $i from 1 through 100 {
+        .cc-w#{$i}p {
+            width: unquote("#{$i}unit");
+        }
+        .cc-minw#{$i}p {
+            min-width: unquote("#{$i}unit");
+        }
+        .cc-maxw#{$i}p {
+            max-width: unquote("#{$i}unit");
+        }
+        .cc-h#{$i}p {
+            height: unquote("#{$i}unit");
+        }
+        .cc-minh#{$i}p {
+            min-height: unquote("#{$i}unit");
+        }
+        .cc-maxh#{$i}p {
+            max-height: unquote("#{$i}unit");
+        }
+    }
+    @for $i from 1 through 120 {
+        .cc-w#{$i}r {
+            width:  #{$i}rem;
+        }
+        .cc-minw#{$i}r {
+            min-width: #{$i}rem;
+        }
+        .cc-maxw#{$i}r {
+            max-width: #{$i}rem;
+        }
+        .cc-h#{$i}r {
+            height: #{$i}rem;
+        }
+        .cc-minh#{$i}r {
+            min-height: #{$i}rem;
+        }
+        .cc-maxh#{$i}r {
+            max-height: #{$i}rem;
+        }
+    }
+    @for $i from 1 through 120 {
+        .cc-w#{$i}e {
+            width: #{$i}em;
+        }
+        .cc-minw#{$i}e {
+            min-width: #{$i}em;
+        }
+        .cc-maxw#{$i}e {
+            max-width: #{$i}em;
+        }
+        .cc-h#{$i}e {
+            height: #{$i}em;
+        }
+        .cc-minh#{$i}e {
+            min-height: #{$i}em;
+        }
+        .cc-maxh#{$i}e {
+            max-height: #{$i}em;
+        }
+    }
+}
+
+// width wX, min-width minwX, max-width maxwX, height hX, min-height minhX, max-height maxhX, 
+// in increments of 1
+@include size;

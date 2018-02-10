@@ -1,0 +1,565 @@
+/* 2. layout (structure) - display, float, flexbox 
+// layout display       .ld-*   b ib i 
+//                              f if g ig
+//                              t it tcap tcell tcol tcolg tfg tr trg
+//                              box ibox c flow-r li
+//                              inh ini uns non
+// layout float         .lf-*   l r n inh ini uns
+// layout flex parent   .lfp-*  fdc fdcr fdr fdrr fwn fww fwwr jcc jcfs jcfe jcsa jcsb jcs aib aic aifs aife ais acc acfs acfe acsa acsb acs
+// layout flex child    .lfc-*  o0..o9 fg1..fg10 fba fb1..fb101 asa asb asc asfs asfe ass
+/* #########################################################*/
+/* DISPLAY*/
+.ld-b {
+    display: block;
+}
+.ld-ib {
+    display: inline-block;
+}
+.ld-i {
+    display: inline;
+}
+.ld-f {
+    display: flex;
+}
+.ld-if {
+    display: inline-flex;
+}
+.ld-g {
+    display: grid;
+}
+.ld-ig {
+    display: inline-grid;
+}
+.ld-t {
+    display: table;
+}
+.ld-it {
+    display: inline-table;
+}
+.ld-tcap {
+    display: table-caption;
+}
+.ld-tcell {
+    display: table-cell;
+}
+.ld-tcol {
+    display: table-column;
+}
+.ld-tcolg {
+    display: table-column-group;
+}
+.ld-tfg {
+    display: table-footer-group;
+}
+.ld-thg {
+    display: table-header-group;
+}
+.ld-tr {
+    display: table-row;
+}
+.ld-trg {
+    display: table-row-group;
+}
+.ld-box {
+    display: -webkit-box;
+}
+.ld-ibox { 
+    display: -webkit-inline-box;
+}
+.ld-c {
+    display: contents;
+}
+.ld-flow-r {
+    display: flow-root;
+}
+.ld-li {
+    display: list-item;
+}
+.ld-inh {
+    display: inherit;
+}
+.ld-ini {
+    display: initial;
+}
+.ld-uns {
+    display: unset;
+}
+.ld-non {
+    display: none;
+}
+/* FLOAT */
+.lf-l {
+    float: left;
+}
+.lf-r {
+    float: right;
+}
+.lf-n {
+    float: none;
+}
+.lf-inh {
+    float: inherit;
+}
+.lf-ini {
+    float: initial;
+}
+.lf-uns {
+    float: unset;
+}
+/* FLEXBOX */
+.lfp-fdc {
+    flex-direction: column;
+}
+.lfp-fdcr {
+    flex-direction: column-reverse;
+}
+.lfp-fdr {
+    flex-direction: row;
+}
+.lfp-fdrr {
+    flex-direction: row-reverse;
+}
+.lfp-fwn {
+    flex-wrap: nowrap;
+}
+.lfp-fww {
+    flex-wrap: wrap;
+}
+.lfp-fwwr {
+    flex-wrap: wrap-reverse;
+}
+.lfp-jcc {
+    justify-content: center;
+}
+.lfp-jcfs {
+    justify-content: flex-start;
+}
+.lfp-jcfe {
+    justify-content: flex-end;
+}
+.lfp-jcsa {
+    justify-content: space-around;
+}
+.lfp-jcsb {
+    justify-content: space-between;
+}
+.lfp-jcs {
+    justify-content: stretch;
+}
+.lfp-aib {
+    align-items: baseline;
+ }
+.lfp-aic {
+    align-items: center;
+}
+.lfp-aifs {
+    align-items: flex-start;
+}
+.lfp-aife {
+    align-items: flex-end;
+}
+.lfp-ais {
+    align-items: stretch;
+}
+.lfp-acc {
+    align-content: center;
+}
+.lfp-acfs {
+    align-content: flex-start;
+}
+.lfp-acfe {
+    align-content: flex-end;
+}
+.lfp-acsa {
+    align-content: space-around;
+}
+.lfp-acsb {
+    align-content: space-between;
+}
+.lfp-acs {
+    align-content: stretch;
+}
+.lfc-o0 {
+    order: 0;
+}
+.lfc-o1 {
+    order: 1;
+}
+.lfc-o2 {
+    order: 2;
+}
+.lfc-o3 {
+    order: 3;
+}
+.lfc-o4 {
+    order: 4;
+}
+.lfc-o5 {
+    order: 5;
+}
+.lfc-o6 {
+    order: 6;
+}
+.lfc-o7 {
+    order: 7;
+}
+.lfc-o8 {
+    order: 8;
+}
+.lfc-o9 {
+    order: 9;
+}
+.lfc-fg1 {
+    flex-grow: 1;
+}
+.lfc-fg2 {
+    flex-grow: 2;
+}
+.lfc-fg3 {
+    flex-grow: 3;
+}
+.lfc-fg4 {
+    flex-grow: 4;
+}
+.lfc-fg5 {
+    flex-grow: 5;
+}
+.lfc-fg6 {
+    flex-grow: 6;
+}
+.lfc-fg7 {
+    flex-grow: 7;
+}
+.lfc-fg8 {
+    flex-grow: 8;
+}
+.lfc-fg9 {
+    flex-grow: 9;
+}
+.lfc-fg10 {
+    flex-grow: 10;
+}
+.lfc-fba {
+    flex-basis: auto;
+}
+.lfc-fb1 {
+    flex-basis: 1px;
+}
+.lfc-fb2 {
+    flex-basis: 2px;
+}
+.lfc-fb3 {
+    flex-basis: 3px;
+}
+.lfc-fb4 {
+    flex-basis: 4px;
+}
+.lfc-fb5 {
+    flex-basis: 5px;
+}
+.lfc-fb6 {
+    flex-basis: 6px;
+}
+.lfc-fb7 {
+    flex-basis: 7px;
+}
+.lfc-fb8 {
+    flex-basis: 8px;
+}
+.lfc-fb9 {
+    flex-basis: 9px;
+}
+.lfc-fb10 {
+    flex-basis: 10px;
+}
+.lfc-fb11 {
+    flex-basis: 11px;
+}
+.lfc-fb12 {
+    flex-basis: 12px;
+}
+.lfc-fb13 {
+    flex-basis: 13px;
+}
+.lfc-fb14 {
+    flex-basis: 14px;
+}
+.lfc-fb15 {
+    flex-basis: 15px;
+}
+.lfc-fb16 {
+    flex-basis: 16px;
+}
+.lfc-fb17 {
+    flex-basis: 17px;
+}
+.lfc-fb18 {
+    flex-basis: 18px;
+}
+.lfc-fb19 {
+    flex-basis: 19px;
+}
+.lfc-fb20 {
+    flex-basis: 20px;
+}
+.lfc-fb21 {
+    flex-basis: 21px;
+}
+.lfc-fb22 {
+    flex-basis: 22px;
+}
+.lfc-fb23 {
+    flex-basis: 23px;
+}
+.lfc-fb24 {
+    flex-basis: 24px;
+}
+.lfc-fb25 {
+    flex-basis: 25px;
+}
+.lfc-fb26 {
+    flex-basis: 26px;
+}
+.lfc-fb27 {
+    flex-basis: 27px;
+}
+.lfc-fb28 {
+    flex-basis: 28px;
+}
+.lfc-fb29 {
+    flex-basis: 29px;
+}
+.lfc-fb30 {
+    flex-basis: 30px;
+}
+.lfc-fb31 {
+    flex-basis: 31px;
+}
+.lfc-fb32 {
+    flex-basis: 32px;
+}
+.lfc-fb33 {
+    flex-basis: 33px;
+}
+.lfc-fb34 {
+    flex-basis: 34px;
+}
+.lfc-fb35 {
+    flex-basis: 35px;
+}
+.lfc-fb36 {
+    flex-basis: 36px;
+}
+.lfc-fb37 {
+    flex-basis: 37px;
+}
+.lfc-fb38 {
+    flex-basis: 38px;
+}
+.lfc-fb39 {
+    flex-basis: 39px;
+}
+.lfc-fb40 {
+    flex-basis: 40px;
+}
+.lfc-fb41 {
+    flex-basis: 41px;
+}
+.lfc-fb42 {
+    flex-basis: 42px;
+}
+.lfc-fb43 {
+    flex-basis: 43px;
+}
+.lfc-fb44 {
+    flex-basis: 44px;
+}
+.lfc-fb45 {
+    flex-basis: 45px;
+}
+.lfc-fb46 {
+    flex-basis: 46px;
+}
+.lfc-fb47 {
+    flex-basis: 47px;
+}
+.lfc-fb48 {
+    flex-basis: 48px;
+}
+.lfc-fb49 {
+    flex-basis: 49px;
+}
+.lfc-fb50 {
+    flex-basis: 50px;
+}
+.lfc-fb51 {
+    flex-basis: 51px;
+}
+.lfc-fb52 {
+    flex-basis: 52px;
+}
+.lfc-fb53 {
+    flex-basis: 53px;
+}
+.lfc-fb54 {
+    flex-basis: 54px;
+}
+.lfc-fb55 {
+    flex-basis: 55px;
+}
+.lfc-fb56 {
+    flex-basis: 56px;
+}
+.lfc-fb57 {
+    flex-basis: 57px;
+}
+.lfc-fb58 {
+    flex-basis: 58px;
+}
+.lfc-fb59 {
+    flex-basis: 59px;
+}
+.lfc-fb60 {
+    flex-basis: 60px;
+}
+.lfc-fb61 {
+    flex-basis: 61px;
+}
+.lfc-fb62 {
+    flex-basis: 62px;
+}
+.lfc-fb63 {
+    flex-basis: 63px;
+}
+.lfc-fb64 {
+    flex-basis: 64px;
+}
+.lfc-fb65 {
+    flex-basis: 65px;
+}
+.lfc-fb66 {
+    flex-basis: 66px;
+}
+.lfc-fb67 {
+    flex-basis: 67px;
+}
+.lfc-fb68 {
+    flex-basis: 68px;
+}
+.lfc-fb69 {
+    flex-basis: 69px;
+}
+.lfc-fb70 {
+    flex-basis: 70px;
+}
+.lfc-fb71 {
+    flex-basis: 71px;
+}
+.lfc-fb72 {
+    flex-basis: 72px;
+}
+.lfc-fb73 {
+    flex-basis: 73px;
+}
+.lfc-fb74 {
+    flex-basis: 74px;
+}
+.lfc-fb75 {
+    flex-basis: 75px;
+}
+.lfc-fb76 {
+    flex-basis: 76px;
+}
+.lfc-fb77 {
+    flex-basis: 77px;
+}
+.lfc-fb78 {
+    flex-basis: 78px;
+}
+.lfc-fb79 {
+    flex-basis: 79px;
+}
+.lfc-fb80 {
+    flex-basis: 80px;
+}
+.lfc-fb81 {
+    flex-basis: 81px;
+}
+.lfc-fb82 {
+    flex-basis: 82px;
+}
+.lfc-fb83 {
+    flex-basis: 83px;
+}
+.lfc-fb84 {
+    flex-basis: 84px;
+}
+.lfc-fb85 {
+    flex-basis: 85px;
+}
+.lfc-fb86 {
+    flex-basis: 86px;
+}
+.lfc-fb87 {
+    flex-basis: 87px;
+}
+.lfc-fb88 {
+    flex-basis: 88px;
+}
+.lfc-fb89 {
+    flex-basis: 89px;
+}
+.lfc-fb90 {
+    flex-basis: 90px;
+}
+.lfc-fb91 {
+    flex-basis: 91px;
+}
+.lfc-fb92 {
+    flex-basis: 92px;
+}
+.lfc-fb93 {
+    flex-basis: 93px;
+}
+.lfc-fb94 {
+    flex-basis: 94px;
+}
+.lfc-fb95 {
+    flex-basis: 95px;
+}
+.lfc-fb96 {
+    flex-basis: 96px;
+}
+.lfc-fb97 {
+    flex-basis: 97px;
+}
+.lfc-fb98 {
+    flex-basis: 98px;
+}
+.lfc-fb99 {
+    flex-basis: 99px;
+}
+.lfc-fb100 {
+    flex-basis: 100px;
+}
+.lfc-fb101 {
+    flex-basis: 101px;
+}
+.lfc-asa {
+    align-self: auto;
+}
+.lfc-asb {
+    align-self: baseline;
+}
+.lfc-asc {
+    align-self: center;
+}
+.lfc-asfs {
+    align-self: flex-start;
+}
+.lfc-asfe {
+    align-self: flex-end;
+}
+.lfc-ass {
+    align-self: stretch;
+}

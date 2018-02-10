@@ -1,0 +1,59 @@
+//MY OWN HELPER CLASSES
+
+@mixin marginsAndPaddings($type, $side) {
+    @for $i from -100 through 100 {
+        .u-#{$type}#{$side}#{$i} {
+            $val: #{$i}px;
+            @if $type == 'm' {
+                @if $side == 'b' {
+                    margin-bottom: $val !important
+                } @else if $side == 't' {
+                    margin-top: $val //!important
+                } @else if $side == 'r' {
+                    margin-right: $val //!important
+                } @else if $side == 'l' {
+                    margin-left: $val //!important
+                }
+            } @else {
+                @if $side == 'b' {
+                    padding-bottom: $val !important
+                } @else if $side == 't' {
+                    padding-top: $val !important
+                } @else if $side == 'r' {
+                    padding-right: $val !important
+                } @else if $side == 'l' {
+                    padding-left: $val !important
+                }
+            }
+        }
+    }
+}
+
+//MARGINS mX-100 to mX100
+@include marginsAndPaddings(m, b);
+@include marginsAndPaddings(m, t);
+@include marginsAndPaddings(m, r);
+@include marginsAndPaddings(m, l);
+
+//PADDINGS pX-100 to pX100
+@include marginsAndPaddings(p, b);
+@include marginsAndPaddings(p, t);
+@include marginsAndPaddings(p, r);
+@include marginsAndPaddings(p, l);
+
+// padding pX (all sides)
+@mixin marginsAndPaddings2 {
+    @for $i from 0 through 100 {
+        .u-p#{$i} {
+            padding: #{$i}px #{$i}px #{$i}px #{$i}px;
+        }
+    }
+    @for $i from -100 through 100 {
+        .u-m#{$i} {
+            margin: #{$i}px;
+        }
+    }
+}
+
+// padding pX (all sides), margin mX (all sides)
+@include marginsAndPaddings2;

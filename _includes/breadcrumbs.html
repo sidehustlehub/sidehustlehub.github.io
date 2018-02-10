@@ -1,0 +1,27 @@
+<div class="container-fluid bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pt-4 pb-4">
+<!--
+https://stackoverflow.com/questions/9612235/what-are-some-good-ways-to-implement-breadcrumbs-on-a-jekyll-site
+-->
+{% unless page.hide-breadcrumbs %}
+<span class="text-secondary">
+    <a href="/">Home</a>
+    {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+    {% for crumb in crumbs offset:1 %}
+      {% if forloop.last %}{% endif %}>
+        {% unless forloop.last %}
+          <a href="/{% for crumb in crumbs offset:1 limit:forloop.index %}{{crumb}}/{% endfor %}">
+            {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+          </a>
+        {% else %}
+          {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+        {% endunless %}
+    {% endfor %}
+</span>
+{% endunless %}
+            </div>
+        </div>
+    </div><!-- .container -->
+</div><!-- .container-fluid -->

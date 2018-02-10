@@ -1,0 +1,16 @@
+<div class="col-12 col-lg-8">
+	<h2 class="h6 pt-2 text-secondary pb-3">Recent posts</h2>
+	{% for post in site.posts %}
+		<div class="card flex-lg-row mb-4 border-1">
+			<a href="{{ post.url }}" class="post-image-link">
+				<img class="card-img-left img-fluid" src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
+			</a>
+			<div class="card-body align-self-start align-self-md-center w-90-p" >
+				<a href="{{ post.url }}"><h3 class="card-title h4 m-w-90-p">{{ post.title }}</h3></a>
+				<p class="card-text">
+					Category: {{ post.categories }}
+				</p>
+			</div>
+		</div>
+	{% endfor %}
+</div><!-- .col-12.col-md-8 -->

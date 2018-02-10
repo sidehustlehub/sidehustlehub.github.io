@@ -1,0 +1,296 @@
+/* 4. component skin (cs) 
+.csp - position: a,r,static,f,sticky 
+.css - sides: t r b l -100 to 100 in px
+.csb - border width w0..w10, border style ssolid, sdotted, sdashed, border radius r1..r10 
+.cst - typography: font-size fs0..fs100, font-weight fw1..9, 
+                   font-style fs inh ini uns ita obl, 
+                   font-family ff t g c a tm v i cn, letter-spacing ls-10..10, 
+                   text-tranform tt u l c, text-align ta l r j, 
+                   text-overflow to e
+                   whitespace ws nw, 
+########################################################################*/
+// position
+.csp-a {
+    position: absolute;
+}
+.csp-r {
+    position: relative;
+}
+.csp-static {
+    position: static;
+}
+.csp-f {
+    position: fixed;
+}
+.csp-sticky {
+    position: sticky;
+}
+
+// sides
+@mixin sides {
+    @for $i from -100 through 100 {
+        .css-t#{$i} {
+            top: #{$i}px;
+        }
+        .css-r#{$i} {
+            top: #{$i}px;
+        }
+        .css-b#{$i} {
+            top: #{$i}px;
+        }
+        .css-l#{$i} {
+            top: #{$i}px;
+        }
+    }
+}
+@include sides;
+
+// border
+.cs-bs {
+    //
+}
+.cs-cs {
+    //
+}
+.csb-w0 {
+    border-width: 0;
+}
+.csb-w1 {
+    border-width: 1px;
+}
+.csb-w2 {
+    border-width: 2px;
+}
+.csb-w3 {
+    border-width: 3px;
+}
+.csb-w4 {
+    border-width: 4px;
+}
+.csb-w5 {
+    border-width: 5px;
+}
+.csb-w6 {    
+    border-width: 6px;
+}
+.csb-w7 {
+    border-width: 7px;
+}
+.csb-w8 {
+    border-width: 8px;
+}
+.csb-w9 {
+    border-width: 9px;
+}
+.csb-w10 {
+    border-width: 10px;
+}
+.csb-ssolid {
+    border-style: solid;
+}
+.csb-sdotted {
+    border-style: dotted;
+}
+.csb-sdashed {
+    border-style: dashed;
+}
+.csb-r1 {
+    border-radius: 1px;
+}
+.csb-r2 {
+    border-radius: 2px;
+}
+.csb-r3 {
+    border-radius: 3px;
+}
+.csb-r4 {
+    border-radius: 4px;
+}
+.csb-r5 {
+    border-radius: 5px;
+}
+.csb-r6 {
+    border-radius: 6px;
+}
+.csb-r7 {
+    border-radius: 7px;
+}
+.csb-r8 {
+    border-radius: 8px;
+}
+.csb-r9 {
+    border-radius: 9px;
+}
+.csb-r10 {
+    border-radius: 10px;
+}
+
+// typography: .cst- 
+// fs#, fw#, fsABC, ff#, ls#, ttA, taA, taA, toe, wsnw
+// sides
+// sides
+@mixin fontsize {
+    @for $i from 0 through 100 {
+        .cst-fs#{$i} {
+            font-size: #{$i}px;
+        }
+    }
+}
+@include fontsize;
+
+.cst-fw1 {
+    font-weight: 100;
+}
+.cst-fw2 {
+    font-weight: 200;
+}
+.cst-fw3 {
+    font-weight: 300;
+}
+.cst-fw4 {
+    font-weight: 400;
+}
+.cst-fw5 {
+    font-weight: 500;
+}
+.cst-fw6 {
+    font-weight: 600;
+}
+.cst-fw7 {
+    font-weight: 700;
+}
+.cst-fw8 {
+    font-weight: 800;
+}
+.cst-fw9 {
+    font-weight: 900;
+}
+.cst-fsinh {
+    font-style: inherit;
+}
+.cst-fsini {
+    font-style: initial;
+}
+.cst-fsuns {
+    font-style: unset;
+}
+.cst-fsita {
+    font-style: italic;
+}
+.cst-fsnor {
+    font-style: normal;
+}
+.cst-fsobl {
+    font-style: oblique;
+}
+.cst-fft {
+    font-family: 'Times New Roman', serif;
+}
+.cst-ffg {
+    font-family: 'Georgia', serif;
+}
+.cst-ffc {
+    font-family: 'Cambria', serif;
+}
+.cst-ffa {
+    font-family: 'Arial', sans-serif; 
+}
+.cst-fftm {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.cst-ffv {
+    font-family: 'Verdana', sans-serif;
+}
+.cst-ffi {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.cst-ffcn {
+    font-family: 'Courier New', 'Courier', monospace;
+}
+.cst-ls-10 {
+    letter-spacing: -1px;
+}
+.cst-ls-09 {
+    letter-spacing: -0.9px;
+}
+.cst-ls-08 {
+    letter-spacing: -0.8px;
+}
+.cst-ls-07 {
+    letter-spacing: -0.7px;
+}
+.cst-ls-06 {
+    letter-spacing: -0.6px;
+}
+.cst-ls-05 {
+    letter-spacing: -0.5px;
+}
+.cst-ls-04 {
+    letter-spacing: -0.4px;
+}
+.cst-ls-03 {
+    letter-spacing: -0.3px;
+}
+.cst-ls-02 {
+    letter-spacing: -0.2px;
+}
+.cst-ls-01 {
+    letter-spacing: -0.1px;
+}
+.cst-ls0 {
+    letter-spacing: 0px;
+}
+.cst-ls01 {
+    letter-spacing: 0.1px;
+}
+.cst-ls02 {
+    letter-spacing: 0.2px;
+}
+.cst-ls03 {
+    letter-spacing: 0.3px;
+}
+.cst-ls04 {
+    letter-spacing: 0.4px;
+}
+.cst-ls05 {
+    letter-spacing: 0.5px;
+}
+.cst-ls06 {
+    letter-spacing: 0.6px;
+}
+.cst-ls07 {
+    letter-spacing: 0.7px;
+}
+.cst-ls08 {
+    letter-spacing: 0.8px;
+}
+.cst-ls09 {
+    letter-spacing: 0.9px;
+}
+.cst-ls10 {
+    letter-spacing: 1px;
+}
+.cst-ttu {
+    text-transform: uppercase;
+}
+.cst-ttl {
+    text-transform: lowercase;
+}
+.cst-ttc {
+    text-transform: capitalize;
+}
+.cst-tal {
+    text-align: left;
+}
+.cst-tar {
+    text-align: right;
+}    
+.cst-taj {
+    text-align: justify;
+}
+.cst-toe {
+    text-overflow: ellipsis;
+}
+.cst-wsnw {
+    white-space: nowrap;
+}
